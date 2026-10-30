@@ -13,6 +13,7 @@ import {
 import { useSceneStore } from "@/store/useSceneStore";
 
 import { ChessBoard } from "./board/ChessBoard";
+import { Pieces } from "./pieces/Pieces";
 import { SceneOverlay } from "./SceneOverlay";
 import { StudioEnvironment } from "./StudioEnvironment";
 import { StudioFloor } from "./StudioFloor";
@@ -44,6 +45,7 @@ export function Scene() {
           <StudioLighting />
 
           <ChessBoard />
+          <Pieces />
           <StudioFloor />
 
           <OrbitControls
