@@ -13,7 +13,7 @@ type SceneState = {
 
 export const useSceneStore = create<SceneState>((set) => ({
   autoRotate: false,
-  environmentIntensity: 0.7,
+  environmentIntensity: 0.8,
   toggleAutoRotate: () =>
     set((state) => ({ autoRotate: !state.autoRotate })),
   setEnvironmentIntensity: (environmentIntensity) =>

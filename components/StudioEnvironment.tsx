@@ -26,7 +26,7 @@ export function StudioEnvironment() {
       {/* Overhead softbox */}
       <Lightformer
         form="rect"
-        intensity={5}
+        intensity={3.5}
         color="#ffffff"
         position={[0, 7, 0]}
         rotation={[Math.PI / 2, 0, 0]}

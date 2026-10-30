@@ -5,27 +5,39 @@ export const SCENE_COLORS = {
   background: "#0a0b0f",
   fog: "#0a0b0f",
   floor: "#101217",
-  plinth: "#15171c",
-  plinthTop: "#1b1e24",
   accent: "#d8b26a",
   warmKey: "#ffe3b8",
   coolFill: "#9fc4ff",
 } as const;
 
+/**
+ * White sits on +Z and Black on -Z, matching the board's rank orientation.
+ */
+export const CAMERA_PRESETS = {
+  white: {
+    position: [0, 5.4, 8] satisfies Vector3Tuple,
+    target: [0, 0.28, 0] satisfies Vector3Tuple,
+  },
+  black: {
+    position: [0, 5.4, -8] satisfies Vector3Tuple,
+    target: [0, 0.28, 0] satisfies Vector3Tuple,
+  },
+} as const;
+
 export const CAMERA_CONFIG = {
-  position: [8, 6.5, 10] satisfies Vector3Tuple,
-  fov: 38,
+  position: CAMERA_PRESETS.white.position,
+  fov: 36,
   near: 0.1,
   far: 80,
 } as const;
 
 export const ORBIT_CONFIG = {
-  target: [0, 0.35, 0] satisfies Vector3Tuple,
-  minDistance: 6,
-  maxDistance: 18,
-  /** Keep the camera above the table at all times. */
-  minPolarAngle: Math.PI / 6,
-  maxPolarAngle: Math.PI / 2.15,
+  target: CAMERA_PRESETS.white.target,
+  minDistance: 5.5,
+  maxDistance: 16,
+  /** Keep the camera between a high angle and a low table-level view. */
+  minPolarAngle: Math.PI / 7,
+  maxPolarAngle: Math.PI / 2.35,
   enablePan: false,
   enableDamping: true,
   dampingFactor: 0.075,

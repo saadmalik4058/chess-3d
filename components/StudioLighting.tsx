@@ -9,15 +9,15 @@ import { SCENE_COLORS, SHADOW_MAP_SIZE } from "@/lib/scene-config";
 export function StudioLighting() {
   return (
     <>
-      <ambientLight intensity={0.16} color="#cfd8ff" />
-      <hemisphereLight args={["#dfe8ff", "#08090c", 0.35]} />
+      <ambientLight intensity={0.12} color="#cfd8ff" />
+      <hemisphereLight args={["#dfe8ff", "#08090c", 0.28]} />
 
       {/* Key */}
       <spotLight
         position={[7, 10, 6]}
         angle={0.6}
         penumbra={1}
-        intensity={240}
+        intensity={170}
         color={SCENE_COLORS.warmKey}
         castShadow
         shadow-mapSize={[SHADOW_MAP_SIZE, SHADOW_MAP_SIZE]}
@@ -30,7 +30,7 @@ export function StudioLighting() {
       {/* Fill */}
       <directionalLight
         position={[-6, 5, 7]}
-        intensity={0.55}
+        intensity={0.45}
         color={SCENE_COLORS.coolFill}
       />
 

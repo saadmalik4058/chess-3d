@@ -18,7 +18,7 @@ export function SceneOverlay() {
       >
         <div>
           <p className="text-[0.6rem] font-medium uppercase tracking-[0.45em] text-amber-200/60">
-            Stage 01
+            Stage 02
           </p>
           <h1 className="mt-2 text-2xl font-medium tracking-tight text-zinc-100 sm:text-3xl">
             Chess <span className="text-zinc-600">/</span> 3D
@@ -48,7 +48,7 @@ export function SceneOverlay() {
         transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         className="flex items-center justify-between gap-4 text-[0.65rem] uppercase tracking-[0.22em] text-zinc-500"
       >
-        <span>Studio scene</span>
+        <span>8 × 8 · Marble &amp; brass</span>
         <span className="hidden sm:inline">Drag to orbit · Scroll to zoom</span>
       </motion.footer>
     </div>

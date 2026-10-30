@@ -12,8 +12,8 @@ import {
 } from "@/lib/scene-config";
 import { useSceneStore } from "@/store/useSceneStore";
 
+import { ChessBoard } from "./board/ChessBoard";
 import { SceneOverlay } from "./SceneOverlay";
-import { ScenePlaceholder } from "./ScenePlaceholder";
 import { StudioEnvironment } from "./StudioEnvironment";
 import { StudioFloor } from "./StudioFloor";
 import { StudioLighting } from "./StudioLighting";
@@ -34,7 +34,7 @@ export function Scene() {
         }}
         onCreated={({ gl, scene }) => {
           gl.toneMapping = THREE.ACESFilmicToneMapping;
-          gl.toneMappingExposure = 1.05;
+          gl.toneMappingExposure = 0.95;
           scene.background = new THREE.Color(SCENE_COLORS.background);
           scene.fog = new THREE.Fog(SCENE_COLORS.fog, 22, 48);
         }}
@@ -43,7 +43,7 @@ export function Scene() {
           <StudioEnvironment />
           <StudioLighting />
 
-          <ScenePlaceholder />
+          <ChessBoard />
           <StudioFloor />
 
           <OrbitControls
